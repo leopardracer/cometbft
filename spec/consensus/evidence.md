@@ -6,7 +6,7 @@
 Evidence is an important component of CometBFT's security model. Whilst the core
 consensus protocol provides correctness guarantees for state machine replication
 that can tolerate less than 1/3 failures, the evidence system looks to detect and
-gossip byzantine faults whose combined power is greater than  or equal to 1/3. It is worth noting that
+gossip byzantine faults whose combined power is greater than or equal to 1/3. It is worth noting that
 the evidence system is designed purely to detect possible attacks, gossip them,
 commit them on chain and inform the application running on top of CometBFT.
 Evidence in itself does not punish "bad actors", this is left to the discretion
@@ -177,7 +177,7 @@ message Misbehavior {
 }
 ```
 
-`DuplicateVoteEvidence` and `LightClientAttackEvidence` are can be used to derive the list of `abci.Misbehavior` for
+`DuplicateVoteEvidence` and `LightClientAttackEvidence` can be used to derive the list of `abci.Misbehavior` for
 each byzantine validator that is sent to the application in the `FinalizeBlockRequest`.
 
 Because of this, extra fields are necessary:
