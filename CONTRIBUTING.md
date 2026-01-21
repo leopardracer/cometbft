@@ -256,7 +256,7 @@ record your change. Also, run either `git rebase` or `git merge` on top of the
 latest `main`. (Since pull requests are squash-merged, either is fine!)
 
 Update the `UPGRADING.md` if the change you've made is breaking and the
-instructions should be in place for a user on how he/she can upgrade its
+instructions should be in place for a user on how he/she can upgrade their
 software (ABCI application, CometBFT blockchain, light client, wallet).
 
 Sometimes (often!) pull requests get out-of-date with `main`, as other people
