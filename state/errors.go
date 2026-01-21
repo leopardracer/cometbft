@@ -52,7 +52,7 @@ type (
 		Height int64
 	}
 
-	ErrABCIResponseResponseUnmarshalForHeight struct {
+	ErrABCIResponseUnmarshalForHeight struct {
 		Height int64
 	}
 
@@ -112,12 +112,12 @@ func (e ErrNoABCIResponsesForHeight) Error() string {
 	return fmt.Sprintf("could not find results for height #%d", e.Height)
 }
 
-func (e ErrABCIResponseResponseUnmarshalForHeight) Error() string {
+func (e ErrABCIResponseUnmarshalForHeight) Error() string {
 	return fmt.Sprintf("could not decode results for height %d", e.Height)
 }
 
 func (e ErrABCIResponseCorruptedOrSpecChangeForHeight) Error() string {
-	return fmt.Sprintf("failed to unmarshall FinalizeBlockResponse (also tried as legacy ABCI response) for height %d", e.Height)
+	return fmt.Sprintf("failed to unmarshal FinalizeBlockResponse (also tried as legacy ABCI response) for height %d", e.Height)
 }
 
 func (e ErrABCIResponseCorruptedOrSpecChangeForHeight) Unwrap() error {
