@@ -98,7 +98,7 @@ components:
   ``p2p.Envelope``.
 
 - special path for routing local messages that doesn't require message
-  serialization (protobuf marshalling/unmarshaling).
+  serialization (protobuf marshaling/unmarshaling).
 
 Adding these semantics, particularly if in conjunction with synchronous
 semantics provides a solution to dependency graph problems currently present
